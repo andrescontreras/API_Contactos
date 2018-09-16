@@ -36,7 +36,7 @@ namespace API_Contactos.Controllers
 					empresa = "empresa1",
 					cargo = "Cargo contacto",
 					NombreContacto = "nombre contacto",
-					formasC = lc
+					//formasC = lc
 				});
 				_context.SaveChanges();
 			}
@@ -63,13 +63,49 @@ namespace API_Contactos.Controllers
 
 		// Metodo Post
 		[HttpPost]
-		public IActionResult Create(Publicacion item)
+		public IActionResult Create([FromBody] Publicacion item)
 		{
 
 			_context.PublicacionItems.Add(item);
 			_context.SaveChanges();
 
 			return CreatedAtRoute("GetPublicacion", new { id = item.Id }, item);
+		}
+
+		// Metodo put
+		[HttpPut("{id}")]
+		public IActionResult Update(long id, [FromBody] Publicacion item)
+		{
+			var publicacion = _context.PublicacionItems.Find(id);
+			if (publicacion == null)
+			{
+				return NotFound();
+			}
+
+			publicacion.Sector = item.Sector;
+			publicacion.SubSector = item.SubSector;
+			publicacion.empresa = item.empresa;
+			publicacion.NombreContacto = item.NombreContacto;
+			publicacion.cargo = item.cargo;
+
+			_context.PublicacionItems.Update(publicacion);
+			_context.SaveChanges();
+			return NoContent();
+		}
+
+		// Metodo delete
+		[HttpDelete("{id}")]
+		public IActionResult Delete(long id)
+		{
+			var publicacion = _context.PublicacionItems.Find(id);
+			if (publicacion == null)
+			{
+				return NotFound();
+			}
+
+			_context.PublicacionItems.Remove(publicacion);
+			_context.SaveChanges();
+			return NoContent();
 		}
 	}
 }

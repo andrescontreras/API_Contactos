@@ -13,7 +13,7 @@ namespace API_Contactos.Models
 		public string empresa { get; set; }
 		public string NombreContacto { get; set; }
 		public string cargo { get; set; }
-		public List<Contacto> formasC { get; set; }
+		//public List<Contacto> formasC { get; set; }
 
 	}
 }
