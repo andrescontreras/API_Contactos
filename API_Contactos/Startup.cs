@@ -11,6 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
+using Microsoft.AspNetCore.Cors;
+
 using Microsoft.EntityFrameworkCore;
 using API_Contactos.Models;
 
@@ -28,14 +30,26 @@ namespace API_Contactos
 		// This method gets called by the runtime. Use this method to add services to the container.
 		public void ConfigureServices(IServiceCollection services)
 		{
+			services.AddCors();
+
+			services.Configure<IISOptions>(options =>
+			{
+				options.ForwardClientCertificate = false;
+			});
+
 			services.AddDbContext<PublicacionContext>(opt =>
 				opt.UseInMemoryDatabase("TodoList"));
 			services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+			
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
 		public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 		{
+			app.UseCors(builder =>
+			builder.WithOrigins("http://localhost:4200", "http://afcserver.tk").AllowAnyHeader().AllowAnyMethod().AllowCredentials());
+
 			if (env.IsDevelopment())
 			{
 				app.UseDeveloperExceptionPage();
@@ -47,6 +61,8 @@ namespace API_Contactos
 
 			app.UseHttpsRedirection();
 			app.UseMvc();
+			
+
 		}
 	}
 }

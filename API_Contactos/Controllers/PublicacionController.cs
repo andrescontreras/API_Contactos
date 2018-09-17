@@ -33,11 +33,42 @@ namespace API_Contactos.Controllers
 				_context.PublicacionItems.Add(new Publicacion
 				{ Sector = "Sector1",
 					SubSector = "SubSector1",
-					empresa = "empresa1",
-					cargo = "Cargo contacto",
+					Empresa = "empresa1",
+					Cargo = "Cargo contacto",
 					NombreContacto = "nombre contacto",
-					//formasC = lc
+					formasC = lc
 				});
+
+				_context.PublicacionItems.Add(new Publicacion
+				{
+					Sector = "Sector2",
+					SubSector = "SubSector1",
+					Empresa = "empresa1",
+					Cargo = "Cargo contacto",
+					NombreContacto = "nombre contacto",
+					formasC = lc
+				});
+
+				_context.PublicacionItems.Add(new Publicacion
+				{
+					Sector = "Sector3",
+					SubSector = "SubSector1",
+					Empresa = "empresa1",
+					Cargo = "Cargo contacto",
+					NombreContacto = "nombre contacto",
+					formasC = lc
+				});
+
+				_context.PublicacionItems.Add(new Publicacion
+				{
+					Sector = "Sector4",
+					SubSector = "SubSector1",
+					Empresa = "empresa1",
+					Cargo = "Cargo contacto",
+					NombreContacto = "nombre contacto",
+					formasC = lc
+				});
+
 				_context.SaveChanges();
 			}
 		}
@@ -84,9 +115,9 @@ namespace API_Contactos.Controllers
 
 			publicacion.Sector = item.Sector;
 			publicacion.SubSector = item.SubSector;
-			publicacion.empresa = item.empresa;
+			publicacion.Empresa = item.Empresa;
 			publicacion.NombreContacto = item.NombreContacto;
-			publicacion.cargo = item.cargo;
+			publicacion.Cargo = item.Cargo;
 
 			_context.PublicacionItems.Update(publicacion);
 			_context.SaveChanges();
