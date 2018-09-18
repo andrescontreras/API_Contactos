@@ -36,6 +36,8 @@ namespace API_Contactos.Controllers
 					Empresa = "Coltejer",
 					Cargo = "Administrador ventas",
 					NombreContacto = "Pedro Alberto Gonzales",
+					Descripcion = "Empresa que se encargar de la creación de telas para diferentes usos. El contacto publicado puede " +
+					"ofrecer un punto de estrada para poder realizar pequeños o grandes negocios con un tercero y la empresa",
 					formasC = lc
 				});
 
@@ -46,6 +48,8 @@ namespace API_Contactos.Controllers
 					Empresa = "Protela S.A",
 					Cargo = "Administrador proveedores",
 					NombreContacto = "Julio Federico Rodrigez",
+					Descripcion =  "Empresa que se encarga de la creación de hilos para su futuro uso en diferentes tipos de telas, " +
+					"El contacto publicado puede ofrecer la generación de negocios ligados a las materias primas necesarias para cumplir el objetivo de las empresas",
 					formasC = lc
 				});
 
@@ -56,6 +60,8 @@ namespace API_Contactos.Controllers
 					Empresa = "Transmilenio",
 					Cargo = "Director de seguridad",
 					NombreContacto = "Miriam Cardenas",
+					Descripcion = "Empresa que se encarga en la prestación de servicios de transporte urbano en Bogotá, El contacto publicado puede ofrecer la potenciales" +
+					" negocios los cuales puedan ser prestados por un tercero, el cual pueda mejorar la seguridad del sistema de transporte.",
 					formasC = lc
 				});
 
@@ -66,6 +72,8 @@ namespace API_Contactos.Controllers
 					Empresa = "Software S.A",
 					Cargo = "Director de ventas",
 					NombreContacto = "INMACULADA BOLAÑOS",
+					Descripcion = "Empresa que se encarga en la optimización de procesos empresariales a través de sistemas complejos que mejoren la productividad de la empresa, " +
+					"El contacto publicado es primera la primera forma de contacto para aquellas empresas que estén buscando optimizar sus procesos.",
 					formasC = lc
 				});
 
