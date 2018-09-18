@@ -31,41 +31,41 @@ namespace API_Contactos.Controllers
 				lc.Add(c1);
 				lc.Add(c2);
 				_context.PublicacionItems.Add(new Publicacion
-				{ Sector = "Sector1",
-					SubSector = "SubSector1",
-					Empresa = "empresa1",
-					Cargo = "Cargo contacto",
-					NombreContacto = "nombre contacto",
+				{ Sector = "Industria Textil",
+					SubSector = "Confección",
+					Empresa = "Coltejer",
+					Cargo = "Administrador ventas",
+					NombreContacto = "Pedro Alberto Gonzales",
 					formasC = lc
 				});
 
 				_context.PublicacionItems.Add(new Publicacion
 				{
-					Sector = "Sector2",
-					SubSector = "SubSector1",
-					Empresa = "empresa1",
-					Cargo = "Cargo contacto",
-					NombreContacto = "nombre contacto",
+					Sector = "Industria Textil",
+					SubSector = "Tejeduría",
+					Empresa = "Protela S.A",
+					Cargo = "Administrador proveedores",
+					NombreContacto = "Julio Federico Rodrigez",
 					formasC = lc
 				});
 
 				_context.PublicacionItems.Add(new Publicacion
 				{
-					Sector = "Sector3",
-					SubSector = "SubSector1",
-					Empresa = "empresa1",
-					Cargo = "Cargo contacto",
-					NombreContacto = "nombre contacto",
+					Sector = "Transporte",
+					SubSector = "Transporte urbano",
+					Empresa = "Transmilenio",
+					Cargo = "Director de seguridad",
+					NombreContacto = "Miriam Cardenas",
 					formasC = lc
 				});
 
 				_context.PublicacionItems.Add(new Publicacion
 				{
-					Sector = "Sector4",
-					SubSector = "SubSector1",
-					Empresa = "empresa1",
-					Cargo = "Cargo contacto",
-					NombreContacto = "nombre contacto",
+					Sector = "Información y comunicaciones",
+					SubSector = "Desarrollo de sistemas informáticos",
+					Empresa = "Software S.A",
+					Cargo = "Director de ventas",
+					NombreContacto = "INMACULADA BOLAÑOS",
 					formasC = lc
 				});
 
