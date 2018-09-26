@@ -48,7 +48,7 @@ namespace API_Contactos
 		public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 		{
 			app.UseCors(builder =>
-			builder.WithOrigins("http://localhost:4200", "http://afcserver.tk").AllowAnyHeader().AllowAnyMethod().AllowCredentials());
+			builder.WithOrigins("http://localhost:4200", "http://afcserver.tk", " https://as-networking-fe.azurewebsites.net").AllowAnyHeader().AllowAnyMethod().AllowCredentials());
 
 			if (env.IsDevelopment())
 			{
@@ -61,6 +61,7 @@ namespace API_Contactos
 
 			app.UseHttpsRedirection();
 			app.UseMvc();
+
 			
 
 		}

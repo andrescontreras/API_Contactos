@@ -38,7 +38,7 @@ namespace API_Contactos.Controllers
 					NombreContacto = "Pedro Alberto Gonzales",
 					Descripcion = "Empresa que se encargar de la creación de telas para diferentes usos. El contacto publicado puede " +
 					"ofrecer un punto de estrada para poder realizar pequeños o grandes negocios con un tercero y la empresa",
-					formasC = lc
+					formasC = { }
 				});
 
 				_context.PublicacionItems.Add(new Publicacion
@@ -89,7 +89,8 @@ namespace API_Contactos.Controllers
 			return _context.PublicacionItems.ToList();
 		}
 
-		[HttpGet("{id}", Name = "GetPublicacion")]
+		
+		[HttpGet("GetPublicacion/{id}", Name = "GetPublicacion")]
 		public ActionResult<Publicacion> GetById(long id)
 		{
 			var item = _context.PublicacionItems.Find(id);
